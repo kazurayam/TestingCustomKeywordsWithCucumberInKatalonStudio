@@ -26,8 +26,8 @@ class MyStepDefinition {
 
 	@And("I enter username (.*) and password (.*)")
 	def I_enter_valid_username_password(String username, String password) {
-		WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_userName'), username)
-		WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_password'), password)
+		WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_Username_userName'), username)
+		WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_Password_password'), password)
 	}
 
 	@And("I click Log in button")
@@ -37,15 +37,14 @@ class MyStepDefinition {
 
 	@Then("I should be able to login successfully")
 	def I_login_successfully() {
-		WebUI.click(findTestObject('Page_CURA Healthcare Service/button_login'))
 		WebUI.verifyTextPresent('Make Appointment', false)
 		WebUI.closeBrowser()
 	}
 
 	@And("I enter an invalid username (.*) and password (.*)")
 	def I_enter_invalid_username_password(String username, String password) {
-		WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_userName'), username)
-		WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_password'), password)
+		WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_Username_userName'), username)
+		WebUI.setText(findTestObject('Page_CURA Healthcare Service/input_Password_password'), password)
 	}
 
 	@Then("I should NOT be able to login successfully")
