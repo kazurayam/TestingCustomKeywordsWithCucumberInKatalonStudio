@@ -8,5 +8,3 @@ Feature: ScreenshotDriver
     Then the page should have input field preset with "Cheese!"
     When I take screenshot of the page using AShot
     Then the result image should be big enough
-    
-    

@@ -50,7 +50,6 @@ class ScreenshotDriverStepdefs {
 	public void i_take_screenshot_of_the_page() {
 		WebDriver driver = DriverFactory.getWebDriver()
 		BufferedImage bi = CustomKeywords.'com.example.ScreenshotDriver.takeEntirePageImage'(driver)
-		
 	}
 
 	@Then("the result image should be big enough")
