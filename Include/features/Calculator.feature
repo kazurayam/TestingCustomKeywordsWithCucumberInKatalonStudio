@@ -16,7 +16,6 @@ Feature: Calculator
       | -1.0 | -2.0 |   -3.0 |
 
   
-  
   Scenario Outline: Subtract
   	When I subtract <arg1> from <arg0>
   	Then I get <result>
